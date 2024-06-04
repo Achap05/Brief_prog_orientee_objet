@@ -24,4 +24,4 @@ class Voiture {
 
 let voiture1 = new Voiture( 'renault','Clio2','2001','blanche' );
 
-voiture1.afficherDetails(voiture1);
+voiture1.afficherDetails();
