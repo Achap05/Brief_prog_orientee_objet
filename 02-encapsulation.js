@@ -22,9 +22,6 @@ class Voiture {
         this.#annee = annee;
         this.#couleur = couleur;
     }
-    afficherDetails() {
-        console.log(this.#marque,this.#modele,this.#annee,this.#couleur);
-    };
 
 get marque() {
     return this.#marque;
@@ -51,10 +48,13 @@ set annee(nouvelleAnnee) {
 set couleur(nouvelleCouleur) {
     this.#couleur = nouvelleCouleur;
 }
+
+
+afficherDetails() {
+    console.log(this.marque, this.modele, this.annee, this.couleur);
+  }
 }
 
-
 let voiture1 = new Voiture( 'renault','Clio2','2001','blanche' );
-
-voiture1.afficherDetails();
 voiture1.couleur = "grise";
+voiture1.afficherDetails();
