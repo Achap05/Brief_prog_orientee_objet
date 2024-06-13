@@ -9,11 +9,22 @@
 2. Faites en sorte que la classe `Voiture` hérite de la classe `Vehicule` et possède l'attribut `couleur` (non présent dans la classe `Vehicule`).
 */
 
-class Voiture {
-    constructor(marque,modele,annee,couleur) {
+class Vehicule {
+    constructor(marque,modele,annee) {
         this.marque = marque;
         this.modele = modele;
         this.annee = annee;
+    }
+    afficherDetails() {
+        console.log(this.marque,this.modele,this.annee);
+    };
+}
+
+
+
+class Voiture extends Vehicule {
+    constructor(marque, modele, annee, couleur) {
+        super(marque, modele, annee);
         this.couleur = couleur;
     }
     afficherDetails() {
@@ -21,15 +32,6 @@ class Voiture {
     };
 }
 
-class Vehicule extends Voiture {
-    constructor(marque,modele,annee) {
-        super(marque,modele,annee,couleur);
-    }
-    afficherDetails() {
-        console.log(this.marque,this.modele,this.annee,this.couleur);
-    };
-}
+let voiture1 = new Voiture( 'Renault','Clio','2001','blanche');
 
-let vehicule1 = new Vehicule( 'Audi','R8','2010');
-
-vehicule1.afficherDetails();
+voiture1.afficherDetails();

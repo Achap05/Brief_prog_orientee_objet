@@ -11,6 +11,31 @@
 */
 
 class Animal {
-
-    
+    makeNoise() {
+        console.log("l'animal fait du bruit");
+    }
 }
+
+class Chien extends Animal { 
+    makeNoise() {
+        console.log("le chien aboie");
+    }
+}
+
+class Chat extends Animal { 
+    makeNoise() {
+        console.log("le chat miaule");
+    }
+}
+
+const animaux = [
+    new Animal(),
+    new Chien(),
+    new Chat()
+];
+
+animaux.forEach(animal => animal.makeNoise());
+
+
+
+
